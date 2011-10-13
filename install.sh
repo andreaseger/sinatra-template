@@ -1,5 +1,9 @@
 git clone git://github.com/sch1zo/sinatra-template.git $1
-cd $1
+if $1
+  cd $1
+else
+  cd sinatra-template
+fi
 
 rm -rf .git
 
