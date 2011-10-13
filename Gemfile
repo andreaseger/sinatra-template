@@ -5,11 +5,10 @@ gem 'sinatra', :require => 'sinatra/base'
 gem 'haml'
 gem 'rack-flash'
 
-#server
-gem 'thin'
-
 group :production do
-  gem 'newrelic_rpm'
+  #gem 'newrelic_rpm'
+  # put whatever application server you want to run in production here
+  gem 'unicorn'
 end
 
 group :development do
@@ -25,6 +24,7 @@ end
 
 group :test, :development do
   gem 'rspec'
+  gem 'thin'
 end
 
 group :test do

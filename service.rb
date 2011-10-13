@@ -1,6 +1,5 @@
 require_relative 'lib/helper'
 
-
 class Service < Sinatra::Base
   configure do |c|
     helpers Sinatra::MyHelper
@@ -19,7 +18,6 @@ class Service < Sinatra::Base
     register Sinatra::Reloader
     c.also_reload "./lib/**/*.rb"
   end
-
   configure(:test) { disable :logging }
 
   def cache_page(seconds=60*60)
