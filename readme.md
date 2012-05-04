@@ -11,14 +11,14 @@ A nice little [sinatra](http://www.sinatrarb.com/) template which uses to follow
 ##directly create a app with this line
 
     ## to create the app within the folder sinatra-template do
-    wget https://raw.github.com/sch1zo/sinatra-template/master/install.sh -O - | sh
+    wget https://raw.github.com/sch1zo/sinatra-template/rewrite/bootstrap.sh -O - | sh
     ## or
-    curl https://raw.github.com/sch1zo/sinatra-template/master/install.sh | sh
+    curl https://raw.github.com/sch1zo/sinatra-template/rewrite/bootstrap.sh | sh
 
     ## to give the folder a different name do this
-    wget https://raw.github.com/sch1zo/sinatra-template/master/install.sh && sh install.sh APP_NAME && rm install.sh
+    wget https://raw.github.com/sch1zo/sinatra-template/rewrite/bootstrap.sh && sh install.sh APP_NAME && rm install.sh
     ## or use the little wizard
-    wget https://raw.github.com/sch1zo/sinatra-template/master/install.sh && sh install.sh && rm install.sh
+    wget https://raw.github.com/sch1zo/sinatra-template/rewrite/bootstrap.sh && sh install.sh && rm install.sh
 
 ###Notes
 - the install script will simply pick up the current ruby to install and run bundler 
