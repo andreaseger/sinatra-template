@@ -1,0 +1,28 @@
+Sinatra Template
+===
+
+What is this
+---
+
+
+How it works
+---
+
+
+What it does
+---
+
+
+
+How to run it
+---
+
+
+    bundle install
+    bundle exec rackup -p4567
+
+>> goto 127.0.0.1:4567
+
+
+[@sch1zo](https://www.twitter.com/sch1zo)
+[blog](http://sch1zo.github.com)

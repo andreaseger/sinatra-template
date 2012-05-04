@@ -24,8 +24,13 @@ if [ ! -d "$name" ]; then
   git clone git://github.com/sch1zo/sinatra-template.git $name
   cd $name
 
+  # which to the new branch
+  git checkout rewrite
+
   rm -rf .git
-  rm "install.sh"
+  rm "bootstrap"
+  rm "readme.md"
+  mv "readme.template" "readme.md"
 
   #install bundler if its not already
   if ! command -v bundle ; then

@@ -1,37 +1,41 @@
 # A sample Gemfile
-source "http://rubygems.org"
+source "https://rubygems.org"
 
+gem 'rake'
 gem 'sinatra', :require => 'sinatra/base'
-gem 'haml'
-gem 'rack-flash'
+gem 'sinatra-contrib', :require => 'sinatra/contrib'
+gem 'mustache', :require => 'mustache/sinatra'
 
-group :production do
-  #gem 'newrelic_rpm'
-  # put whatever application server you want to run in production here
-  gem 'unicorn'
+gem 'puma'
+
+# storage
+gem 'mongoid'
+gem "bson_ext"
+gem 'database_cleaner'
+
+group :assets do
+  gem 'therubyracer'
+  gem 'sprockets'
+  gem 'coffee-script'
+  gem 'sass'
+  gem 'uglifier', :require => false
+  gem 'compass-susy-plugin', :require => 'susy'
+  gem 'compass', ">= 0.12.alpha.1", :require => false
 end
 
 group :development do
   gem 'sinatra-reloader', :require => 'sinatra/reloader'
   gem 'capistrano'
-
-  gem 'compass'
-  gem 'compass-susy-plugin'
-  gem 'guard-compass'
-
-  gem 'pry'
+  gem 'guard-sprockets2'
 end
 
-group :test, :development do
-  gem 'rspec'
-  gem 'thin'
+group :development, :test do
+  gem 'pry'
+  gem 'pry-nav'
 end
 
 group :test do
-  gem 'simplecov', :require => false
+  gem 'rspec'
   gem 'mocha'
-  gem 'capybara'
-  gem 'factory_girl'
-  gem 'guard-livereload'
   gem 'guard-rspec'
 end

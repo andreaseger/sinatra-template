@@ -1,10 +1,8 @@
-#require './env'
-require 'bundler'
+%w(config lib .).each do |f|
+  $:.unshift File.expand_path("../#{f}",__FILE__)
+end
+%w(environment models db app).each do |l|
+  require l
+end
 
-rack_env = ENV['RACK_ENV'] || 'production'
-
-Bundler.setup
-Bundler.require(:default, rack_env)
-
-require './service'
-run Service
+App.run!

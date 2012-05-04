@@ -1,0 +1,13 @@
+common: &common
+  host: localhost
+  port: 27017
+
+development:
+  <<: *common
+  name: music_server_dev 
+test:
+  <<: *common
+  name: music_server_test
+production:
+  <<: *common
+  name: music_server

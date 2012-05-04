@@ -1,3 +1,0 @@
-#/bin/sh
-
-bundle exec thin -p4567 -R config.ru start

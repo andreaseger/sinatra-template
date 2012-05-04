@@ -2,14 +2,11 @@
 
 A nice little [sinatra](http://www.sinatrarb.com/) template which uses to following stuff
 
-- [bundler](http://gembundler.com/)
-- [thin](http://code.macournoyer.com/thin/) for development & a example [unicorn](http://unicorn.bogomips.org/) config
-- [rspec](https://www.relishapp.com/rspec), [capybara](https://github.com/jnicklas/capybara), [mocha](http://mocha.rubyforge.org/)
-- [guard](http://rubydoc.info/github/guard/guard/master/frames) setup with rspec, compass, livereload
-- [capistrano](http://capify.org) incl. a example deploy config
-- [rack-flash](https://github.com/nakajima/rack-flash)
-- [haml](http://haml-lang.com/)
-- [compass](http://compass-style.org/) + [susy](http://susy.oddbird.net/) + default layout & stylesheet (inpired by [HTML5 Boilerplate](http://html5boilerplate.com))
+- bundler
+- puma
+- Mustache/ICanHaz
+- Mongoid
+- sprockets
 
 ##directly create a app with this line
 
@@ -26,7 +23,7 @@ A nice little [sinatra](http://www.sinatrarb.com/) template which uses to follow
 ###Notes
 - the install script will simply pick up the current ruby to install and run bundler 
 - autoinstall will probably only work with [rbenv](https://github.com/sstephenson/rbenv), [rvm](http://beginrescueend.com/) or similar, cause they normally don't need sudo for that
-
+- didn't test the rake task for assets yet, they probably dont work and/or set you machine on fire
 
 ##meta
 
